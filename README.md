@@ -16,7 +16,7 @@ A fully functional to-do management system built with PHP and JavaScript. This a
 
 A static demo of the application interface is available on GitHub Pages. This demo showcases the UI and basic functionality of the Todo Management System without requiring a PHP server or database.
 
-**Demo URL:** https://rahul-sutradhar.github.io/todo-management-system/
+**Demo URL:** https://rahul-sutradhar.github.io/ToDoManagementSystem/
 
 The GitHub Pages demo includes:
 - Interactive UI demonstration
