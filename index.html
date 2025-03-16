@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo Management System</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="github-pages/style.css">
+</head>
+<body>
+    <header class="hero">
+        <div class="container">
+            <h1><i class="fas fa-check-circle"></i> Todo Management System</h1>
+            <p>A powerful and intuitive task management application</p>
+            <div class="cta-buttons">
+                <a href="#features" class="btn btn-primary">Explore Features</a>
+                <a href="#demo" class="btn btn-secondary">View Demo</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">Key Features</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <h3>Task Management</h3>
+                    <p>Create, edit, and delete tasks with ease. Organize your work efficiently.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-filter"></i>
+                    </div>
+                    <h3>Advanced Filtering</h3>
+                    <p>Filter tasks by status and priority to focus on what matters most.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                    <h3>User Authentication</h3>
+                    <p>Secure login system to protect your tasks and personal information.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Responsive Design</h3>
+                    <p>Works seamlessly on desktop, tablet, and mobile devices.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h3>Due Date Tracking</h3>
+                    <p>Set and track due dates for your tasks to stay on schedule.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-flag"></i>
+                    </div>
+                    <h3>Priority Levels</h3>
+                    <p>Assign high, medium, or low priority to your tasks.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="demo" class="demo">
+        <div class="container">
+            <h2 class="section-title">Interactive Demo</h2>
+            <div class="demo-container">
+                <div class="demo-sidebar">
+                    <h3>Filters</h3>
+                    
+                    <div class="filter-section">
+                        <h4>Status</h4>
+                        <div class="filter-options">
+                            <div class="filter-option">
+                                <input type="radio" id="status-all" name="status-filter" value="all" checked>
+                                <label for="status-all">All</label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="radio" id="status-pending" name="status-filter" value="pending">
+                                <label for="status-pending">Pending</label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="radio" id="status-in-progress" name="status-filter" value="in_progress">
+                                <label for="status-in-progress">In Progress</label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="radio" id="status-completed" name="status-filter" value="completed">
+                                <label for="status-completed">Completed</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="filter-section">
+                        <h4>Priority</h4>
+                        <div class="filter-options">
+                            <div class="filter-option">
+                                <input type="radio" id="priority-all" name="priority-filter" value="all" checked>
+                                <label for="priority-all">All</label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="radio" id="priority-high" name="priority-filter" value="high">
+                                <label for="priority-high">High</label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="radio" id="priority-medium" name="priority-filter" value="medium">
+                                <label for="priority-medium">Medium</label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="radio" id="priority-low" name="priority-filter" value="low">
+                                <label for="priority-low">Low</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button id="add-todo-btn" class="btn btn-primary add-todo-btn">
+                        <i class="fas fa-plus"></i> Add New Todo
+                    </button>
+                </div>
+                
+                <div class="demo-content">
+                    <div class="todo-header">
+                        <h2>My Todos</h2>
+                    </div>
+                    
+                    <div id="todo-list" class="todo-list">
+                        <!-- Sample Todo Items for Demo -->
+                        <div class="todo-item pending high-priority">
+                            <div class="todo-content">
+                                <h3 class="todo-title">Complete Project Proposal</h3>
+                                <p class="todo-description">Draft the initial project proposal with timeline and budget estimates.</p>
+                                <div class="todo-details">
+                                    <div class="todo-priority">
+                                        <span class="priority-indicator priority-high"></span>
+                                        <span>High Priority</span>
+                                    </div>
+                                    <div class="todo-status">
+                                        <i class="fas fa-circle-notch"></i>
+                                        <span>Pending</span>
+                                    </div>
+                                    <div class="todo-due-date">
+                                        <i class="far fa-calendar-alt"></i>
+                                        <span>05/15/2023</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="todo-actions">
+                                <button class="action-btn complete" title="Mark as Completed">
+                                    <i class="fas fa-check-circle"></i>
+                                </button>
+                                <button class="action-btn edit" title="Edit Todo">
+                                    <i class="fas fa-edit"></i>
+                                </button>
+                                <button class="action-btn delete" title="Delete Todo">
+                                    <i class="fas fa-trash-alt"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="todo-item in-progress medium-priority">
+                            <div class="todo-content">
+                                <h3 class="todo-title">Research Competitors</h3>
+                                <p class="todo-description">Analyze top 5 competitors and create a comparison report.</p>
+                                <div class="todo-details">
+                                    <div class="todo-priority">
+                                        <span class="priority-indicator priority-medium"></span>
+                                        <span>Medium Priority</span>
+                                    </div>
+                                    <div class="todo-status">
+                                        <i class="fas fa-circle-notch"></i>
+                                        <span>In Progress</span>
+                                    </div>
+                                    <div class="todo-due-date">
+                                        <i class="far fa-calendar-alt"></i>
+                                        <span>05/20/2023</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="todo-actions">
+                                <button class="action-btn complete" title="Mark as Completed">
+                                    <i class="fas fa-check-circle"></i>
+                                </button>
+                                <button class="action-btn edit" title="Edit Todo">
+                                    <i class="fas fa-edit"></i>
+                                </button>
+                                <button class="action-btn delete" title="Delete Todo">
+                                    <i class="fas fa-trash-alt"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="todo-item completed low-priority">
+                            <div class="todo-content">
+                                <h3 class="todo-title">Schedule Team Meeting</h3>
+                                <p class="todo-description">Set up weekly team meeting and send calendar invites.</p>
+                                <div class="todo-details">
+                                    <div class="todo-priority">
+                                        <span class="priority-indicator priority-low"></span>
+                                        <span>Low Priority</span>
+                                    </div>
+                                    <div class="todo-status">
+                                        <i class="fas fa-circle-notch"></i>
+                                        <span>Completed</span>
+                                    </div>
+                                    <div class="todo-due-date">
+                                        <i class="far fa-calendar-alt"></i>
+                                        <span>05/10/2023</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="todo-actions">
+                                <button class="action-btn pending" title="Mark as Pending">
+                                    <i class="fas fa-undo"></i>
+                                </button>
+                                <button class="action-btn edit" title="Edit Todo">
+                                    <i class="fas fa-edit"></i>
+                                </button>
+                                <button class="action-btn delete" title="Delete Todo">
+                                    <i class="fas fa-trash-alt"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2><i class="fas fa-check-circle"></i> Todo Management System</h2>
+                    <p>Organize your tasks efficiently</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#demo">Demo</a></li>
+                        <li><a href="#" target="_blank">Documentation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact</h3>
+                    <p><i class="fas fa-envelope"></i> contact@example.com</p>
+                    <div class="social-links">
+                        <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Todo Management System. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Add Todo Modal -->
+    <div id="add-todo-modal" class="modal">
+        <div class="modal-content">
+            <button id="close-add-modal" class="close-modal">&times;</button>
+            <div class="modal-header">
+                <h3><i class="fas fa-plus-circle"></i> Add New Todo</h3>
+            </div>
+            <form id="add-todo-form">
+                <div class="form-group">
+                    <label for="title">Title</label>
+                    <input type="text" id="title" name="title" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <textarea id="description" name="description" class="form-control" rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="priority">Priority</label>
+                    <select id="priority" name="priority" class="form-control">
+                        <option value="medium">Medium</option>
+                        <option value="high">High</option>
+                        <option value="low">Low</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="due-date">Due Date</label>
+                    <input type="date" id="due-date" name="due_date" class="form-control">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="cancel-add" class="btn btn-secondary">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Add Todo</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <!-- Edit Todo Modal -->
+    <div id="edit-todo-modal" class="modal">
+        <div class="modal-content">
+            <button id="close-edit-modal" class="close-modal">&times;</button>
+            <div class="modal-header">
+                <h3><i class="fas fa-edit"></i> Edit Todo</h3>
+            </div>
+            <form id="edit-todo-form">
+                <input type="hidden" id="edit-todo-id" name="todo_id">
+                <div class="form-group">
+                    <label for="edit-title">Title</label>
+                    <input type="text" id="edit-title" name="title" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="edit-description">Description</label>
+                    <textarea id="edit-description" name="description" class="form-control" rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="edit-status">Status</label>
+                    <select id="edit-status" name="status" class="form-control">
+                        <option value="pending">Pending</option>
+                        <option value="in_progress">In Progress</option>
+                        <option value="completed">Completed</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="edit-priority">Priority</label>
+                    <select id="edit-priority" name="priority" class="form-control">
+                        <option value="medium">Medium</option>
+                        <option value="high">High</option>
+                        <option value="low">Low</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="edit-due-date">Due Date</label>
+                    <input type="date" id="edit-due-date" name="due_date" class="form-control">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="cancel-edit" class="btn btn-secondary">Cancel</button>
+                    <button type="submit" class="btn btn-warning">Update Todo</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="github-pages/script.js"></script>
+</body>
+</html> 
