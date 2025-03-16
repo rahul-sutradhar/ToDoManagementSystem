@@ -639,6 +639,60 @@ body {
     box-shadow: 0 0 0 3px rgba(74, 107, 255, 0.25);
 }
 
+/* Notification Styles */
+.notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 2000;
+    max-width: 350px;
+}
+
+.notification.show {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.notification.success {
+    border-left: 4px solid var(--success-color);
+}
+
+.notification.error {
+    border-left: 4px solid var(--danger-color);
+}
+
+.notification-content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.notification-content i {
+    font-size: 20px;
+}
+
+.notification.success i {
+    color: var(--success-color);
+}
+
+.notification.error i {
+    color: var(--danger-color);
+}
+
+.notification-content span {
+    font-size: 14px;
+    color: var(--dark-color);
+}
+
 /* Responsive Styles */
 @media (max-width: 768px) {
     .demo-container {
@@ -674,5 +728,11 @@ body {
     
     .footer-content {
         grid-template-columns: 1fr;
+    }
+    
+    .notification {
+        left: 20px;
+        right: 20px;
+        max-width: calc(100% - 40px);
     }
 } 
