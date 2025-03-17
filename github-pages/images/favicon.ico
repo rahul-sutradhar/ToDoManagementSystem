@@ -1,1 +1,12 @@
- 
+This is a placeholder for the ICO version of the favicon.
+The actual ICO file should be generated from the SVG or PNG version.
+
+To convert the SVG/PNG to ICO, you can use:
+1. Online converters like https://convertio.co/svg-ico/
+2. Image editing software like GIMP or Photoshop
+3. Command line tools like ImageMagick
+
+A proper favicon.ico file should include multiple sizes:
+- 16x16 pixels
+- 32x32 pixels
+- 48x48 pixels 

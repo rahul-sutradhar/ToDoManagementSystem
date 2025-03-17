@@ -1,1 +1,13 @@
- 
+This is a placeholder for the PNG version of the favicon.
+The actual PNG file should be generated from the SVG version.
+
+To convert the SVG to PNG, you can use:
+1. Online converters like https://svgtopng.com/
+2. Image editing software like GIMP, Photoshop, or Inkscape
+3. Command line tools like ImageMagick
+
+Recommended sizes for favicon.png:
+- 32x32 pixels
+- 64x64 pixels
+- 192x192 pixels (for Android)
+- 512x512 pixels (for PWA) 
